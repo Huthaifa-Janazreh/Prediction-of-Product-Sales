@@ -14,7 +14,7 @@ As part of my data science bootcamp, this project aims to support a group of hom
 ## 📊 Exploratory Visuals & Insights
 
 ### 1. Distribution of Sale Price
-![Sale Price Histogram](hist_saleprice.png)  
+![Sale Price Histogram](Plots\hist_saleprice.png)  
 - Sale prices are **right-skewed**, with most houses selling between \$100K–\$250K.  
 
 ---
@@ -23,7 +23,7 @@ As part of my data science bootcamp, this project aims to support a group of hom
 ![Correlation Heatmap](heatmap_correlation.png)  
 - Features such as **Overall Quality, Living Area, and Garage Cars** show strong positive correlations with SalePrice.  
 - Suggests buyers value **quality, size, and garage capacity** most.  
-- ⚠️ Heatmaps only capture **linear** relationships. For non-linear effects, scatterplots or tree-based models are better.
+- Heatmaps only capture **linear** relationships. For non-linear effects, scatterplots or tree-based models are better.
 
 ---
 
