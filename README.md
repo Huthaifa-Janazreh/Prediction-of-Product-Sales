@@ -56,13 +56,13 @@ As part of my data science bootcamp, this project aims to support a group of hom
 ---
 
 ### 8. Sale Price vs Year Built (Regplot)
-![Year Built vs SalePrice](Plots/reg_yearbuilt_saleprice.png)  
+![Year Built vs SalePrice](Plots/year_built_sale_price.png)  
 - **Newer homes sell for more**, though returns flatten for very recent builds.  
 - Some older, well-preserved homes remain luxury outliers.
 
 ---
 
 ### 9. Sale Price vs Year Remodeled (Regplot)
-![Year Remodeled vs SalePrice](Plots/reg_yearremodeled_saleprice.png)  
+![Year Remodeled vs SalePrice](Plots/Year_remodeled_sale_price.png)  
 - **Recently remodeled homes sell at higher prices**.  
 - Suggests renovations before selling can yield meaningful returns.
