@@ -14,7 +14,7 @@ As part of my data science bootcamp, this project aims to support a group of hom
 ## 📊 Exploratory Visuals & Insights
 
 ### 1. Distribution of Sale Price
-![Sale Price Histogram](Plots\hist_saleprice.png)  
+![Sale Price Histogram](Plots/hist_saleprice.png)  
 - Sale prices are **right-skewed**, with most houses selling between \$100K–\$250K.  
 
 ---
