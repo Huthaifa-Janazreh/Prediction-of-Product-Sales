@@ -11,7 +11,7 @@ As part of my data science bootcamp, this project aims to support a group of hom
 
 
 
-## 📊 Exploratory Visuals & Insights
+##  Exploratory Visuals & Insights
 
 ### 1. Distribution of Sale Price
 ![Sale Price Histogram](Plots/hist_saleprice.png)  
@@ -20,7 +20,7 @@ As part of my data science bootcamp, this project aims to support a group of hom
 ---
 
 ### 2. Correlation Heatmap
-![Correlation Heatmap](heatmap_correlation.png)  
+![Correlation Heatmap](Plots/heatmap_correlation.png)  
 - Features such as **Overall Quality, Living Area, and Garage Cars** show strong positive correlations with SalePrice.  
 - Suggests buyers value **quality, size, and garage capacity** most.  
 - Heatmaps only capture **linear** relationships. For non-linear effects, scatterplots or tree-based models are better.
@@ -28,27 +28,27 @@ As part of my data science bootcamp, this project aims to support a group of hom
 ---
 
 ### 3. Living Area vs Sale Price (Scatter)
-![Living Area vs SalePrice](scatter_livarea_saleprice.png)  
+![Living Area vs SalePrice](Plots/scatter_livarea_saleprice.png)  
 - Clear positive relationship: **larger homes → higher prices**.  
 - Diminishing returns appear for very large homes, with a few luxury outliers above \$1M.
 
 ---
 
 ### 5. Median Sale Price by Year (Line Plot)
-![Median Sale Price by Year](line_median_saleprice_by_year.png)  
+![Median Sale Price by Year](Plots/line_median_saleprice_by_year.png)  
 - Prices **peaked in 2007** and declined after, reflecting the **2008 housing crisis**.  
 
 ---
 
 ### 6. Count of Sales per Year (Bar Plot)
-![Sales Count by Year](bar_sales_by_year.png)  
+![Sales Count by Year](Plots/bar_sales_by_year.png)  
 - Most sales occurred **2006–2009**, with a **drop in 2010**.  
 - Matches slowing demand during the financial downturn.
 
 ---
 
 ### 7. Sale Price by Neighborhood (Boxplot)
-![Sale Price by Neighborhood](box_saleprice_by_neighborhood.png)  
+![Sale Price by Neighborhood](Plots/box_saleprice_by_neighborhood.png)  
 - **Neighborhood has a major effect** on property value.  
 - StoneBr, NridgHt, and Crawfor command higher prices compared to other areas.  
 - Location remains one of the strongest predictors of house prices.
@@ -56,13 +56,13 @@ As part of my data science bootcamp, this project aims to support a group of hom
 ---
 
 ### 8. Sale Price vs Year Built (Regplot)
-![Year Built vs SalePrice](reg_yearbuilt_saleprice.png)  
+![Year Built vs SalePrice](Plots/reg_yearbuilt_saleprice.png)  
 - **Newer homes sell for more**, though returns flatten for very recent builds.  
 - Some older, well-preserved homes remain luxury outliers.
 
 ---
 
 ### 9. Sale Price vs Year Remodeled (Regplot)
-![Year Remodeled vs SalePrice](reg_yearremodeled_saleprice.png)  
+![Year Remodeled vs SalePrice](Plots/reg_yearremodeled_saleprice.png)  
 - **Recently remodeled homes sell at higher prices**.  
 - Suggests renovations before selling can yield meaningful returns.
