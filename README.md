@@ -81,7 +81,7 @@ As part of my data science bootcamp, this project aims to support a group of hom
 | Model | Train R² | Test R² | Train RMSE | Test RMSE | Diagnosis |
 |--------|-----------|----------|-------------|------------|------------|
 | Linear Regression | 0.65 | 0.81 | 54,063 | 30,585 | Slight underfit |
-| **Random Forest (Default)** | **0.96** | **0.84** | **17,321** | **28,203** | Mild overfit ✅ |
+| **Random Forest (Default)** | **0.96** | **0.84** | **17,321** | **28,203** | Mild overfit  |
 
 ---
 
