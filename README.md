@@ -66,3 +66,40 @@ As part of my data science bootcamp, this project aims to support a group of hom
 ![Year Remodeled vs SalePrice](Plots/Year_remodeled_sale_price.png)  
 - **Recently remodeled homes sell at higher prices**.  
 - Suggests renovations before selling can yield meaningful returns.
+
+
+###  Model Recommendation & Evaluation Summary
+
+#### **Recommended Model**
+- **Random Forest Regressor (Default Parameters)**
+- Achieved **highest accuracy** and **best generalization** compared to Linear Regression.
+
+---
+
+#### **Performance Comparison**
+
+| Model | Train R² | Test R² | Train RMSE | Test RMSE | Diagnosis |
+|--------|-----------|----------|-------------|------------|------------|
+| Linear Regression | 0.65 | 0.81 | 54,063 | 30,585 | Slight underfit |
+| **Random Forest (Default)** | **0.96** | **0.84** | **17,321** | **28,203** | Mild overfit ✅ |
+
+---
+
+#### **Interpretation for Stakeholders**
+- The Random Forest model explains about **84% of the variation** in sales values.
+- This means it can **predict sales fairly accurately** and capture complex relationships between features.
+- On average, its predictions differ from actual sales by around **\$28,000**.
+
+---
+
+#### **Chosen Metric: RMSE (Root Mean Squared Error)**
+- Shows the **average prediction error in dollars**, same unit as the target.
+- Penalizes large mistakes more heavily, making it **reliable for sales forecasting**.
+- Easier for non-technical readers to interpret than R² or MSE.
+
+---
+
+#### **Overfitting / Underfitting Check**
+- **Train R² (0.96)** vs **Test R² (0.84)** → small gap indicates **slight overfitting**, but within acceptable range.
+- The model **generalizes well** and performs strongly on unseen data.
+
