@@ -68,38 +68,68 @@ As part of my data science bootcamp, this project aims to support a group of hom
 - Suggests renovations before selling can yield meaningful returns.
 
 
-###  Model Recommendation & Evaluation Summary
-
-#### **Recommended Model**
-- **Random Forest Regressor (Default Parameters)**
-- Achieved **highest accuracy** and **best generalization** compared to Linear Regression.
+#  Modelling & Evaluation
 
 ---
 
-#### **Performance Comparison**
+##  Model Recommendation & Evaluation Summary
 
 | Model | Train R² | Test R² | Train RMSE | Test RMSE | Diagnosis |
 |--------|-----------|----------|-------------|------------|------------|
-| Linear Regression | 0.65 | 0.81 | 54,063 | 30,585 | Slight underfit |
-| **Random Forest (Default)** | **0.96** | **0.84** | **17,321** | **28,203** | Mild overfit  |
+| Linear Regression | 0.65 | 0.81 | 54 063 | 30 585 | Slight underfit |
+| Random Forest (Default) | 0.96 | 0.82 | 18 136 | 29 902 | Mild overfit |
+| **Random Forest (Tuned)** | **0.90** | **0.86** | **28 866** | **26 350** |  Best balance |
+
+**Recommended Model:**  
+ **Tuned Random Forest Regressor** – best balance between accuracy & generalization.
+
+**Interpretation for Stakeholders**
+- Explains ≈ 86 % of variation in sale prices.  
+- Average prediction error ≈ \$26 000.  
+- Accurately captures major patterns without overfitting.
+
+**Chosen Metric – RMSE**
+- Expressed in **dollars**, easy to interpret.  
+- Penalizes large errors more than MAE → suitable for sales forecasting.
+
+**Overfitting Check**
+- Train R² = 0.90 vs Test R² = 0.86 → minimal gap → good generalization ✅
 
 ---
 
-#### **Interpretation for Stakeholders**
-- The Random Forest model explains about **84% of the variation** in sales values.
-- This means it can **predict sales fairly accurately** and capture complex relationships between features.
-- On average, its predictions differ from actual sales by around **\$28,000**.
+##  Feature Importance & Coefficients Analysis
+
+###  1. Random Forest – Feature Importance
+| Rank | Feature | Importance | Key Insight |
+|------|----------|-------------|-------------|
+| 1 | **Overall Qual** | 0.538 | Main driver of sale price – better quality → higher value |
+| 2 | **Total Bsmt Sqft** | 0.189 | Larger basements raise value |
+| 3 | **Living Area Sqft** | 0.168 | More living space increases price |
+| 4 | **Year Remodeled** | 0.020 | Recently updated homes sell higher |
+| 5 – 10 | *PID, Bsmt Unf Sqft, Full Bath, Garage Cars, Overall Cond…* | 0.01 – 0.02 | Smaller but meaningful effects |
+
+> **Summary:**  
+> Home **quality** and **size** dominate sales value. Buyers pay more for well-built and spacious properties.
 
 ---
 
-#### **Chosen Metric: RMSE (Root Mean Squared Error)**
-- Shows the **average prediction error in dollars**, same unit as the target.
-- Penalizes large mistakes more heavily, making it **reliable for sales forecasting**.
-- Easier for non-technical readers to interpret than R² or MSE.
+### 📈 2. Linear Regression – Top 15 Coefficients
+| Rank | Feature | Coefficient (≈ Δ Price USD) | Effect |
+|------|----------|------------------------------|---------|
+| 1 | **Living Area Sqft** | +26 044 | ↑ Bigger living space → higher price |
+| 2 | **Overall Qual** | +24 187 | ↑ Higher build quality → higher price |
+| 3 | **Total Bsmt Sqft** | +17 711 | ↑ Larger basement adds value |
+| 4 | **Exter Qual** | +15 351 | ↑ Exterior quality adds value |
+| 5 | **Garage Cars** | +11 614 | ↑ More garage capacity → higher price |
+| … | *Bsmt Unf Sqft, Garage Cond, Full Bath, Fence…* | ±1 000 – 10 000 | Minor positive/negative effects |
+
+> **Interpretation:**  
+> Linear Regression confirms the same pattern – **quality and space** are the primary price drivers, with basement and garage conditions adding moderate impact.
 
 ---
 
-#### **Overfitting / Underfitting Check**
-- **Train R² (0.96)** vs **Test R² (0.84)** → small gap indicates **slight overfitting**, but within acceptable range.
-- The model **generalizes well** and performs strongly on unseen data.
+###  3. Cross-Model Insights
+- Both models highlight **Overall Quality** and **Total Area** as the strongest predictors.  
+- Random Forest captures non-linear relationships; Linear Regression shows direct linear influence.  
+- The insights align → focusing on **quality improvement and spacious designs** can maximize sales value.
 
