@@ -113,7 +113,7 @@ As part of my data science bootcamp, this project aims to support a group of hom
 
 ---
 
-### 📈 2. Linear Regression – Top 15 Coefficients
+###  2. Linear Regression – Top 15 Coefficients
 | Rank | Feature | Coefficient (≈ Δ Price USD) | Effect |
 |------|----------|------------------------------|---------|
 | 1 | **Living Area Sqft** | +26 044 | ↑ Bigger living space → higher price |
